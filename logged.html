@@ -19,32 +19,34 @@
 
 <body>
 
-  <div class="full-page">
+  <div class="full-page landing">
     <div class="head">
       <h1>REDD Lab App</h1><br>
       <h2>Choose the pages you want to include:</h2><br><br>
-      <button type="button" class="btn btn-default btn-lg">
+      <button type="button" class="btn btn-default btn-lg page">
         Pellentesque fermentum <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
-      <button type="button" class="btn btn-default btn-lg">
+      <button type="button" class="btn btn-default btn-lg page">
         Sed arcu <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
-      <button type="button" class="btn btn-default btn-lg">
+      <button type="button" class="btn btn-default btn-lg page">
         Aliquam porttitor mauris <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
-      <button type="button" class="btn btn-default btn-lg">
+      <button type="button" class="btn btn-default btn-lg page">
         Quisque volutpat mattis eros <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
-      <button type="button" class="btn btn-default btn-lg">
+      <button type="button" class="btn btn-default btn-lg page">
         Augue <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
-      <button type="button" class="btn btn-default btn-lg">
+      <button type="button" class="btn btn-default btn-lg page">
         Suspendisse urna nibh <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
       <br><br><br><br>
-      <button type="button" class="btn btn-default btn-lg">
-        I'm ready! <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-      </button>
+      <a href="dashboard.html">
+        <button type="button" class="btn btn-default btn-lg">
+          I'm ready! <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+      </a>
     </div>
   </div>
 
@@ -57,6 +59,18 @@
   <script src="bootstrap/js/bootstrap.min.js"></script>
 
   <script>
+  $(document).ready(function() {
+    $(".page").click(function() {
+      $(this).toggleClass("disabled");
+      if ($(this).hasClass("disabled")) {
+        $(this).find("span").removeClass("glyphicon-remove");
+        $(this).find("span").addClass("glyphicon-plus");
+      } else {
+        $(this).find("span").removeClass("glyphicon-plus");
+        $(this).find("span").addClass("glyphicon-remove");
+      }
+    });
+  });
   </script>
 
 </body>

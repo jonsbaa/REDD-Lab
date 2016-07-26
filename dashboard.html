@@ -19,15 +19,18 @@
 
 <body>
 
-  <div class="full-page landing">
-    <div class="head">
-      <h1>REDD Lab App</h1><br>
-      <h2>Log in with Facebook to see your REDD Lab data!</h2><br><br>
-      <a href="logged.html">
-        <button type="button" class="btn btn-default btn-lg">
-          Log in <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-        </button>
-      </a>
+  <div class="full-page dashboard">
+    <h1>REDD Lab App</h1><br>
+    <h2>Your Workshop Data</h2><br><br>
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#likes" aria-controls="likes" role="tab" data-toggle="tab">Likes</a></li>
+      <li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
+      <li role="presentation"><a href="#shares" aria-controls="shares" role="tab" data-toggle="tab">Shares</a></li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="likes">Hi</div>
+      <div role="tabpanel" class="tab-pane" id="comments">Hello</div>
+      <div role="tabpanel" class="tab-pane" id="shares">Goodbye</div>
     </div>
   </div>
 

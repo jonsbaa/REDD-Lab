@@ -153,7 +153,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'source_sans_prosemibold';
-	color: white;
 }
 
 h1 {
@@ -168,14 +167,22 @@ h1 {
 	min-height: 100vh;
 	text-align: center;
 	position: relative;
-	background-color: #FFFFFF;
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("bg.jpg") no-repeat center 28%;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='team2.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='team2.jpg', sizingMethod='scale')";
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-	background-size: cover;
+	background-color: black;
+}
+
+.landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("bg.jpg") no-repeat center 28%;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='team2.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='team2.jpg', sizingMethod='scale')";
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.dashboard {
+    background-color: #FFFFFF;
 }
 
 .head {
@@ -190,4 +197,16 @@ h1 {
     .head {
     	width: 90%;
     }
+}
+
+.btn:focus, .btn:active {
+    outline: none;
+}
+
+.btn.disabled {
+    cursor: pointer;
+}
+
+a.btn.disabled {
+    pointer-events: auto;
 }

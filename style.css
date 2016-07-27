@@ -142,6 +142,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'code_pro_demoregular';
+    src: url('fonts/Code_Pro_Demo-webfont.eot');
+    src: url('fonts/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Code_Pro_Demo-webfont.woff2') format('woff2'),
+         url('fonts/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('fonts/Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('fonts/Code_Pro_Demo-webfont.svg#code_pro_demoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
 	width: 100%;
 	margin: 0;
@@ -157,6 +169,11 @@ body {
 
 h1 {
 	font-size: 4em;
+    font-family: 'code_pro_demoregular';
+}
+
+h3 {
+    font-family: 'code_pro_demoregular';
 }
 
 .full-page {
@@ -179,10 +196,6 @@ h1 {
     -o-background-size: cover;
     background-size: cover;
     color: #FFFFFF;
-}
-
-.dashboard {
-    background-color: #FFFFFF;
 }
 
 .head {
@@ -210,3 +223,81 @@ h1 {
 a.btn.disabled {
     pointer-events: auto;
 }
+
+.dashboard {
+    background-color: #E9E9E9;
+}
+
+.dashboard-container {
+    background-color: #FFFFFF;
+}
+
+.dashboard a, footer a {
+    color: #990000;
+}
+
+.nav-tabs li {
+    font-family: 'code_pro_demoregular';
+    font-size: 1.5em;
+}
+
+.tab-pane {
+    text-align: justify;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+ol {
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ol > li {
+    position: relative;
+    margin: 0 0 6px 2em;
+    padding-left: 1%;
+    list-style: none;
+    background: #E9E9E9;
+}
+
+ol > li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 2em;
+    margin-right: 8px;
+    color: #990000;
+    font-family: 'code_pro_demoregular';
+    font-size: 3em;
+    text-align: center;
+}
+
+li ol,
+li ul {
+    margin-top: 6px;
+}
+
+ol ol li:last-child {
+    margin-bottom: 0;
+}
+
+.row {
+    min-height: 20vh;
+}
+
+.col-md-2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'code_pro_demoregular';
+}
+
+.col-md-2 > svg {
+    width: 15%;
+    height: auto;
+}
+

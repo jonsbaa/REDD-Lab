@@ -244,6 +244,7 @@ a.btn.disabled {
     background-color: #FFFFFF;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    padding-bottom: 5vh;
 }
 
 .dashboard a {
@@ -268,7 +269,7 @@ ol > li {
     padding-left: 1%;
     list-style: none;
     background: #F6F66;
-    padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 ol > li:before {
@@ -308,7 +309,7 @@ ol ol li:last-child {
 }
 
 .icon {
-    width: 8%;
+    width: 6%;
 }
 
 .icon-container {

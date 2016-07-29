@@ -165,12 +165,16 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'source_sans_prosemibold';
-    background-color: #E9E9E9;
 }
 
 h1 {
 	font-size: 4em;
     font-family: 'code_pro_demoregular';
+    color: white;
+}
+
+h2 {
+    color: white;
 }
 
 h3 {
@@ -207,6 +211,7 @@ h5 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     color: #FFFFFF;
 }
 
@@ -241,10 +246,11 @@ a.btn.disabled {
 }
 
 .dashboard-container {
-    background-color: #FFFFFF;
-    margin-top: 5vh;
+    background: none;
     margin-bottom: 5vh;
     padding-bottom: 5vh;
+    padding-top: 7vh;
+    color: black;
 }
 
 .dashboard a {
@@ -282,7 +288,7 @@ ol > li:before {
     box-sizing: border-box;
     width: 2em;
     margin-right: 8px;
-    color: #990000;
+    color: white;
     font-family: 'code_pro_demoregular';
     font-size: 3em;
     text-align: center;
@@ -352,12 +358,23 @@ canvas {
 
 footer {
     font-family: "code_pro_demoregular";
-    color: #3e9392;
+    color: white;
     text-align: center;
     padding: 1vh;
+    background: none;
 }
 
 footer a {
-    color: #3e9392;
+    color: white;
     text-decoration: underline;
+}
+
+footer a:hover, footer a:focus, footer a:active {
+    color: #E9E9E9;
+}
+
+#logout {
+    position: absolute;
+    right: 1%;
+    top: 2vh;
 }

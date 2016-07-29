@@ -19,7 +19,7 @@
 
 <body>
 
-  <div class="full-page landing">
+  <div class="full-page">
     <div class="head">
       <h1>REDD Lab App</h1><br>
       <h2>Choose the pages you want to include:</h2><br><br>
@@ -60,8 +60,14 @@
 
   <script>
   $(document).ready(function() {
+
+    /* Restyle buttons when clicked */
     $(".page").click(function() {
+
+      /* Toggle Bootstrap's button class "disabled" */
       $(this).toggleClass("disabled");
+
+      /* Change glyphicon */
       if ($(this).hasClass("disabled")) {
         $(this).find("span").removeClass("glyphicon-remove");
         $(this).find("span").addClass("glyphicon-plus");

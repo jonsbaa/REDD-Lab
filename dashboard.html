@@ -19,17 +19,23 @@
 
 <body>
 
-  <div class="full-page landing">
+  <div class="full-page">
     <div class="container dashboard-container">
+
+      <!-- LOG OUT BUTTON -->
       <a href="index.html">
         <button id="logout" type="button" class="btn btn-default">
           Log out <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
         </button>
       </a>
+
+      <!-- CONTENTS -->
       <h1>REDD Lab App</h1>
       <br>
       <h2>Workshop Results: Ranking Based on Reactions</h2><br><br>
       <div id="ranking">
+
+        <!-- ORDERED LIST -->
         <ol type="1">
           <li>
             <div class="container-fluid">
@@ -44,11 +50,13 @@
                   </div>
                 </div>
                 <div class="col-md-3">
+                  <!-- PIE CHART -->
                   <div class="chart-container">
                     <canvas id="chart1" width="180" height="180"></canvas>
                   </div>
                 </div>
                 <div class="col-md-3">
+                  <!-- PIE CHART LABELS -->
                   <div id="legend1"></div>
                   <br>
                   <h4><a href="#">View Comments >></a></h4>
@@ -161,6 +169,8 @@
 
   <script>
   $(document).ready(function() {
+    /* Chart number 1 */
+    /* Assign data for chart */
     var data1 = [
       {
           value: 35,
@@ -182,14 +192,19 @@
       }
       ];
 
+    /* Get correct div */
     var ctx1 = document.getElementById("chart1").getContext("2d");
+
+    /* Create pie chart + style hover labels */
     window.pie1 = new Chart(ctx1).Pie(data1, {
         legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
     });
 
+    /* Add labels */
     var legend = pie1.generateLegend();
     $("#legend1").html(legend);
 
+    /* Chart number 2 */
     var data2 = [
       {
           value: 26,

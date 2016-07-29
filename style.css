@@ -1,3 +1,5 @@
+/* WEBFONTS */
+
 @font-face {
     font-family: 'source_sans_problack';
     src: url('fonts/sourcesanspro-black-webfont.eot');
@@ -192,6 +194,8 @@ h5 {
     font-family: 'source_sans_prosemibold';
 }
 
+/* Full page div for all pages, fallback in pixels */
+
 .full-page {
 	margin: 0;
 	padding: 0;
@@ -201,9 +205,6 @@ h5 {
 	text-align: center;
 	position: relative;
 	background-color: black;
-}
-
-.landing {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("bg.jpg") no-repeat center 28%;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='team2.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='team2.jpg', sizingMethod='scale')";
@@ -215,12 +216,14 @@ h5 {
     color: #FFFFFF;
 }
 
+/* Heading container for index + logged. Vertically centered with position:absolute,
+which doesn't work too nicely if page resized vertically to a small size. :E */
+
 .head {
 	position: absolute;
 	top: 50%; left: 50%;
 	transform: translate(-50%, -50%);
 	width: 65%;
-	min-height: vh;
 }
 
 @media (max-width: 767px) {
@@ -241,20 +244,20 @@ a.btn.disabled {
     pointer-events: auto;
 }
 
-.dashboard {
-    background-color: #E9E9E9;
-}
+/* Container for Dashboard */
 
 .dashboard-container {
     background: none;
+
+    margin-bottom: 35px; /* fallback */
+    padding-bottom: 35px; /* fallback */
+    padding-top: 49px; /* fallback */
+
     margin-bottom: 5vh;
     padding-bottom: 5vh;
     padding-top: 7vh;
-    color: black;
-}
 
-.dashboard a {
-    color: #990000;
+    color: black;
 }
 
 #ranking {
@@ -262,6 +265,8 @@ a.btn.disabled {
     padding-left: 2%;
     padding-right: 2%;
 }
+
+/* Ordered list styling */
 
 ol {
     counter-reset: li;
@@ -275,6 +280,7 @@ ol > li {
     padding-left: 1%;
     list-style: none;
     background: #F6F66;
+    padding-top: 35px; /* fallback */
     padding-top: 5vh;
 }
 
@@ -304,6 +310,7 @@ ol ol li:last-child {
 }
 
 .row {
+    min-height: 140px; /* fallback */
     min-height: 20vh;
     background-color: #F9F9F9;
 }
@@ -319,6 +326,9 @@ ol ol li:last-child {
 }
 
 .icon-container {
+    padding-top: 14px; /* fallback */
+    padding-bottom: 14px; /* fallback */
+
     padding-top: 2vh;
     padding-bottom: 2vh;
     text-align: left;
@@ -328,12 +338,16 @@ ol ol li:last-child {
     font-size: 2.5em;
 }
 
+/* Pie Charts */
+
 .chart-container {
     display: block;
     width: 100%;
+    min-height: 105px; /* fallback */
     min-height: 15vh;
     position: relative;
     margin: 0 auto;
+    padding-top: 14px; /* fallback */
     padding-top: 2vh;
 }
 
@@ -341,6 +355,8 @@ canvas {
     width: 100%;
     height: auto;
 }
+
+/* Labels for Pie Charts */
 
 .pie-legend li span {
     width: 1em;
@@ -353,6 +369,7 @@ canvas {
     list-style: none;
     text-align: left;
     padding-left: 0;
+    padding-top: 21px; /* fallback */
     padding-top: 3vh;
 }
 
@@ -360,6 +377,7 @@ footer {
     font-family: "code_pro_demoregular";
     color: white;
     text-align: center;
+    padding: 7px; /* fallback */
     padding: 1vh;
     background: none;
 }
@@ -376,5 +394,6 @@ footer a:hover, footer a:focus, footer a:active {
 #logout {
     position: absolute;
     right: 1%;
+    top: 14px; /* fallback */
     top: 2vh;
 }

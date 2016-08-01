@@ -249,12 +249,10 @@ a.btn.disabled {
 .dashboard-container {
     background: none;
 
-    margin-bottom: 35px; /* fallback */
     padding-bottom: 35px; /* fallback */
     padding-top: 49px; /* fallback */
 
-    margin-bottom: 5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 7vh;
     padding-top: 7vh;
 
     color: black;
@@ -377,9 +375,13 @@ footer {
     font-family: "code_pro_demoregular";
     color: white;
     text-align: center;
-    padding: 7px; /* fallback */
-    padding: 1vh;
-    background: none;
+    margin: 0 auto;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    min-height: 2vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {

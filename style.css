@@ -194,6 +194,19 @@ h5 {
     font-family: 'source_sans_prosemibold';
 }
 
+h6 {
+    font-size: 1.2em;
+    font-family: 'code_pro_demoregular';
+}
+
+a {
+    color: #389897;
+}
+
+a:hover {
+    color: #1c4c4b;
+}
+
 /* Full page div for all pages, fallback in pixels */
 
 .full-page {
@@ -298,11 +311,6 @@ ol > li:before {
     text-align: center;
 }
 
-li ol,
-li ul {
-    margin-top: 6px;
-}
-
 ol ol li:last-child {
     margin-bottom: 0;
 }
@@ -368,14 +376,13 @@ canvas {
     text-align: left;
     padding-left: 0;
     padding-top: 21px; /* fallback */
-    padding-top: 3vh;
+    padding-top: 5vh;
 }
 
 footer {
     font-family: "code_pro_demoregular";
     color: white;
     text-align: center;
-    margin: 0 auto;
     padding-top: 1vh;
     padding-bottom: 1vh;
     min-height: 2vh;
@@ -386,11 +393,11 @@ footer {
 
 footer a {
     color: white;
-    text-decoration: underline;
 }
 
 footer a:hover, footer a:focus, footer a:active {
     color: #E9E9E9;
+    text-decoration: underline;
 }
 
 #logout {
@@ -398,4 +405,55 @@ footer a:hover, footer a:focus, footer a:active {
     right: 1%;
     top: 14px; /* fallback */
     top: 2vh;
+}
+
+#back {
+    margin-top: 0;
+}
+
+#back a {
+    color: #FFFFFF;
+}
+
+#back a:hover {
+    color: #E9E9E9;
+}
+
+.comments {
+    text-align: justify;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 3vh;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.comment {
+    min-height: 0;
+    padding-bottom: 2vh;
+}
+
+.comment .col-md-1 {
+    text-align: center;
+}
+
+.comment .col-md-11 {
+    padding-left: 0;
+    padding-top: 0;
+    margin-top: 0;
+    padding-right: 2%;
+}
+
+.comment h6 {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.comment .icon {
+    width: 75%;
+    height: auto;
+}
+
+.comment:last-child {
+    padding-bottom: 3vh;
 }

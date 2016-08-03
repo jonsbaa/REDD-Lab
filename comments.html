@@ -43,10 +43,15 @@
             <div class="col-md-6">
               <h3>Name of Post</h3>
               <h5>"Kitty scratches couch bad kitty human give me attention meow make cute face inspect anything brought into the house, for sit in box. Drink water out of the faucet missing until dinner time, or paw at your fat belly and stare at the wall, play with food and get confused."</h5>
-                <div class="icon-container">
-                  <img src="icons/like.svg" class="icon"> 35 /
-                  <img src="icons/avatar.svg" class="icon"> 370 = 9.5 %
+              <div class="icon-container">
+                <div class="left">
+                  <img src="icons/like.svg" class="icon-left"> 35 /
+                  <img src="icons/avatar.svg" class="icon-left"> 370 = 9.5 %
                 </div>
+                <div class="right">
+                  <img src="icons/chat.svg" class="icon-right"> 2
+                </div>
+              </div>
             </div>
             <div class="col-md-3">
               <div class="chart-container">
@@ -54,7 +59,12 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div id="legend1"></div>
+              <br>
+              <div class="labels">
+                <span class="colorbox" id="green"></span> Likes<br>
+                <span class="colorbox" id="grey"></span> Comments<br>
+                <span class="colorbox" id="red"></span> No Reaction
+              </div>
             </div>
           </div>
         </div>
@@ -117,6 +127,12 @@
           label: "Likes"
       },
       {
+          value: 10,
+          color: "#4D5360",
+          highlight: "#82868f",
+          label: "Comments"
+      },
+      {
           value: 370,
           color: "#F7464A",
           highlight: "#FF5A5E",
@@ -131,10 +147,6 @@
     window.pie1 = new Chart(ctx1).Pie(data1, {
         legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
     });
-
-    /* Add labels */
-    var legend = pie1.generateLegend();
-    $("#legend1").html(legend);
 
   });
   </script>
